@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-crud-ecommerce/static/css/main.f18bc010.css",
+    "main.js": "/react-crud-ecommerce/static/js/main.71e378a8.js",
+    "static/js/453.aa7456b4.chunk.js": "/react-crud-ecommerce/static/js/453.aa7456b4.chunk.js",
+    "index.html": "/react-crud-ecommerce/index.html",
+    "main.f18bc010.css.map": "/react-crud-ecommerce/static/css/main.f18bc010.css.map",
+    "main.71e378a8.js.map": "/react-crud-ecommerce/static/js/main.71e378a8.js.map",
+    "453.aa7456b4.chunk.js.map": "/react-crud-ecommerce/static/js/453.aa7456b4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f18bc010.css",
+    "static/js/main.71e378a8.js"
+  ]
+}
