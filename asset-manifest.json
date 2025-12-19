@@ -1,10 +1,16 @@
 {
   "files": {
-    "main.js": "/react-crud-ecommerce/static/js/main.91c0d599.js",
+    "main.css": "/react-crud-ecommerce/static/css/main.d54880d9.css",
+    "main.js": "/react-crud-ecommerce/static/js/main.fd234591.js",
+    "static/media/watch24.jpg": "/react-crud-ecommerce/static/media/watch24.2b3c5ef7826f5434ff6b.jpg",
+    "static/media/watch26.jpg": "/react-crud-ecommerce/static/media/watch26.e7380e81f5547e6b81b9.jpg",
+    "static/media/watch27.jpg": "/react-crud-ecommerce/static/media/watch27.0ec89b34cafd87bf5f23.jpg",
     "index.html": "/react-crud-ecommerce/index.html",
-    "main.91c0d599.js.map": "/react-crud-ecommerce/static/js/main.91c0d599.js.map"
+    "main.d54880d9.css.map": "/react-crud-ecommerce/static/css/main.d54880d9.css.map",
+    "main.fd234591.js.map": "/react-crud-ecommerce/static/js/main.fd234591.js.map"
   },
   "entrypoints": [
-    "static/js/main.91c0d599.js"
+    "static/css/main.d54880d9.css",
+    "static/js/main.fd234591.js"
   ]
 }
