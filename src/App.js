@@ -1,40 +1,49 @@
-import React, { useState } from 'react'
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
-import Navbar from './components/Navbar'
-import Login from './pages/Login'
-import Signup from './pages/Signup'
-import Dashboard from './pages/Dashboard'
-import Settings from './pages/Settings'
-import Watches from './pages/Watches'
-import Cart from './pages/Cart'
-import Checkout from "./pages/Checkout"
-import Orders from './pages/Orders'
-import Invoice from './pages/Invoice'
+import React, { useState } from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
+
+import Navbar from "./components/Navbar";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import Dashboard from "./pages/Dashboard";
+import Watches from "./pages/Watches";
+import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
+import Orders from "./pages/Orders";
+import Bill from "./pages/Bill";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
-    <BrowserRouter>
-
+    <>
       {/* Navbar only after login */}
       {isLoggedIn && <Navbar setIsLoggedIn={setIsLoggedIn} />}
 
       <Routes>
+        {/* Auth */}
         <Route
           path="/login"
           element={
-            isLoggedIn ? <Navigate to="/dashboard" /> : <Login setIsLoggedIn={setIsLoggedIn} />
+            isLoggedIn ? (
+              <Navigate to="/dashboard" />
+            ) : (
+              <Login setIsLoggedIn={setIsLoggedIn} />
+            )
           }
         />
 
         <Route
           path="/signup"
           element={
-            isLoggedIn ? <Navigate to="/dashboard" /> : <Signup setIsLoggedIn={setIsLoggedIn} />
+            isLoggedIn ? (
+              <Navigate to="/dashboard" />
+            ) : (
+              <Signup setIsLoggedIn={setIsLoggedIn} />
+            )
           }
         />
 
+        {/* Protected Routes */}
         <Route
           path="/dashboard"
           element={isLoggedIn ? <Dashboard /> : <Navigate to="/login" />}
@@ -60,22 +69,22 @@ function App() {
           element={isLoggedIn ? <Orders /> : <Navigate to="/login" />}
         />
 
-        {/* 🔥 FIXED INVOICE ROUTE */}
+        {/* ✅ BILL ROUTES (IMPORTANT) */}
         <Route
-          path="/invoice/:id"
-          element={isLoggedIn ? <Invoice /> : <Navigate to="/login" />}
+          path="/bill"
+          element={isLoggedIn ? <Bill /> : <Navigate to="/login" />}
         />
 
         <Route
-          path="/settings"
-          element={isLoggedIn ? <Settings /> : <Navigate to="/login" />}
+          path="/bill/:id"
+          element={isLoggedIn ? <Bill /> : <Navigate to="/login" />}
         />
 
+        {/* Fallback */}
         <Route path="*" element={<Navigate to="/login" />} />
       </Routes>
-
-    </BrowserRouter>
-  )
+    </>
+  );
 }
 
-export default App
+export default App;
